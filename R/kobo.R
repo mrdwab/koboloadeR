@@ -6,10 +6,10 @@
 #' @return A single string with the URL to use.
 #' @note API URLs are made available for KoBo Toolbox ("kobo", \url{https://kc.kobotoolbox.org/api/v1/}), KoBo Humanitarian Response ("kobohr", \url{https://kc.humanitarianresponse.info/api/v1/}), and Ona ("ona", \url{https://ona.io/api/v1/}). For your own installation, or other installations using the same API but accessed at a different URL, enter the full URL.
 #' @author Ananda Mahto
+#' @note This function is not intended to be called directly. It is used in other functions.
 #' @examples
 #' host("kobo")
 #' host("https://ona.io/api/v1/") ## same as host("ona")
-#' @export host
 #'
 host <- function(instring) {
   if (instring %in% c("kobo", "kobohr", "ona")) {
