@@ -43,8 +43,32 @@ kobo_data_downloader("4163")
 # No local dataset found.
 # Downloading remote file.
 # ... The contents would normally be printed here
+
+### On a subsequent run, if the file is already there and no changes have been made
+kobo_data_downloader("4163")
+# Number of rows in local and remote file match.
+# Using local file.
 ```
 
 The `kobo_data_downloader` automatically checks for the existence of an object in your workspace named "data_####" (where "####" is the numeric form ID). If such an object is found, it then uses `kobo_submission_count` to compare the number of rows in the local dataset against the number of rows in the remote dataset. If the number is found to be different, the remote dataset is re-downloaded. If they are found to be the same, the local dataset is used. 
 
 In the future, it is intended that there would be a more robust and efficient method rather than redownloading the entire dataset each time a change has been detected.
+
+--------------
+
+Run the examples at the help pages to get a sense of some of the other features:
+
+```
+example("kobo_datasets")
+example("kobo_submission_count")
+example("kobo_data_downloader")
+```
+
+### Authentication
+
+These functions all use basic HTTP authentication. The easiest way to enter the password details is the common `"username:password"` approach. Thus, when accessing form data using authentication, the function would be used in the following manner:
+
+```
+kobo_data_downloader("123456", "username:password")
+```
+
