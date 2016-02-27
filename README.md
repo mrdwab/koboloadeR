@@ -5,6 +5,15 @@ output: html_document
 
 The `koboloadeR` package is a simple R connection to the [KoBo API (v1)](https://kc.kobotoolbox.org/api/v1/) for the [KoBo Toolbox](http://www.kobotoolbox.org/) project.
 
+### Installation
+
+```
+source("http://jtilly.io/install_github/install_github.R")
+install_github("mrdwab/kobodownloadeR")
+```
+
+### Functions
+
 The package contains the following core functions:
 
 Function | Description
