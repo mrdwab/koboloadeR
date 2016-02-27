@@ -7,6 +7,8 @@ The `koboloadeR` package is a simple R connection to the [KoBo API (v1)](https:/
 
 ### Installation
 
+In this early version of the package, `koboloadeR` will only available on GitHub. It can be installed using:
+
 ```
 source("http://jtilly.io/install_github/install_github.R")
 install_github("mrdwab/kobodownloadeR")
