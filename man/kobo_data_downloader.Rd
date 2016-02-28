@@ -12,7 +12,9 @@ kobo_data_downloader(formid, user = NULL, api = "kobo", check = TRUE)
 \item{user}{Optional. A single string indicating the username and password
 (in the form of \code{"username:password"}), or a character vector or list,
 length 2, with the first value being the "username", and the second being
-the "password".#' @param api The URL at which the API can be accessed.
+the "password".}
+
+\item{api}{The URL at which the API can be accessed.
 Defaults to "kobo", which loads the KoBo Toolbox API.}
 
 \item{check}{Logical. Should the function first check to see whether the
@@ -27,8 +29,10 @@ would be used. The dataset would be named in the form of "data_formid".
 Retrieves the data submitted to a specified dataset.
 }
 \examples{
+\dontrun{
 kobo_data_downloader("15051")
 kobo_data_downloader("31511", api = "kobohr")
+}
 
 }
 \author{

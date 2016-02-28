@@ -14,9 +14,11 @@
 #' @note This function is not intended to be called directly.
 #' It is used in other functions.
 #' @examples
+#'
+#' \dontrun{
 #' host("kobo")
 #' host("https://ona.io/api/v1/") ## same as host("ona")
-#'
+#' }
 host <- function(instring) {
   if (instring %in% c("kobo", "kobohr", "ona")) {
     switch(instring,
@@ -61,11 +63,11 @@ NULL
 #' It is used in other functions.
 #'
 #' @examples
-#'
+#' \dontrun{
 #' pwd_parse("username", "password")
 #' pwd_parse("username:password")
 #' pwd_parse(c("username", "password"))
-#'
+#' }
 #' @author Ananda Mahto
 #'
 pwd_parse <- function(...) {
@@ -126,7 +128,13 @@ NULL
 #'
 #' @aliases kobo_time_parser
 #' @export kobo_time_parser
-kobo_time_parser <- function(indatetime, timezone = Sys.timezone()) {
-  format(kobo_time_parser_UTC(indatetime), tz = timezone, usetz = TRUE)
+kobo_time_parser <- function(instring, timezone = Sys.timezone()) {
+  format(kobo_time_parser_UTC(instring), tz = timezone, usetz = TRUE)
 }
+NULL
+
+#' @import httr
+NULL
+
+#' @import data.table
 NULL

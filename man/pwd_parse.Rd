@@ -20,11 +20,11 @@ This function is not intended to be called directly.
 It is used in other functions.
 }
 \examples{
-
+\dontrun{
 pwd_parse("username", "password")
 pwd_parse("username:password")
 pwd_parse(c("username", "password"))
-
+}
 }
 \author{
 Ananda Mahto

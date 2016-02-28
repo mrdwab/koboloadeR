@@ -35,7 +35,8 @@ NULL
 #' @param user Optional. A single string indicating the username and password
 #' (in the form of \code{"username:password"}), or a character vector or list,
 #' length 2, with the first value being the "username", and the second being
-#' the "password".#' @param api The URL at which the API can be accessed.
+#' the "password".
+#' @param api The URL at which the API can be accessed.
 #' Defaults to "kobo", which loads the KoBo Toolbox API.
 #' @return A single number indicating the number of submissions received.
 #' @author Ananda Mahto
@@ -63,7 +64,8 @@ NULL
 #' @param user Optional. A single string indicating the username and password
 #' (in the form of \code{"username:password"}), or a character vector or list,
 #' length 2, with the first value being the "username", and the second being
-#' the "password".#' @param api The URL at which the API can be accessed.
+#' the "password".
+#' @param api The URL at which the API can be accessed.
 #' Defaults to "kobo", which loads the KoBo Toolbox API.
 #' @param check Logical. Should the function first check to see whether the
 #' data is available offline.
@@ -71,13 +73,13 @@ NULL
 #' disk and the number of rows matches with the online datasets, the local copy
 #' would be used. The dataset would be named in the form of "data_formid".
 #' @author Ananda Mahto
-#'
 #' @examples
+#' \dontrun{
 #' kobo_data_downloader("15051")
 #' kobo_data_downloader("31511", api = "kobohr")
+#' }
 #'
 #' @export kobo_data_downloader
-#'
 kobo_data_downloader <- function(formid, user = NULL, api = "kobo", check = TRUE) {
   locfile <- sprintf(fmt = "data_%s", formid)
 

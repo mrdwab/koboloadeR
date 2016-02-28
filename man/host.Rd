@@ -27,9 +27,11 @@ This function is not intended to be called directly.
 It is used in other functions.
 }
 \examples{
+
+\dontrun{
 host("kobo")
 host("https://ona.io/api/v1/") ## same as host("ona")
-
+}
 }
 \author{
 Ananda Mahto

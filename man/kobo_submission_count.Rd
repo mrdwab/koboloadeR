@@ -12,7 +12,9 @@ kobo_submission_count(formid, user = NULL, api = "kobo")
 \item{user}{Optional. A single string indicating the username and password
 (in the form of \code{"username:password"}), or a character vector or list,
 length 2, with the first value being the "username", and the second being
-the "password".#' @param api The URL at which the API can be accessed.
+the "password".}
+
+\item{api}{The URL at which the API can be accessed.
 Defaults to "kobo", which loads the KoBo Toolbox API.}
 }
 \value{

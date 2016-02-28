@@ -7,7 +7,7 @@
 \usage{
 kobo_time_parser_UTC(instring)
 
-kobo_time_parser(indatetime, timezone = Sys.timezone())
+kobo_time_parser(instring, timezone = Sys.timezone())
 }
 \arguments{
 \item{instring}{A date/time format coming from KoBo.}
