@@ -1,11 +1,8 @@
----
-title: "README"
-output: html_document
----
+# koboloadeR
 
 The `koboloadeR` package is a simple R connection to the [KoBo API (v1)](https://kc.kobotoolbox.org/api/v1/) for the [KoBo Toolbox](http://www.kobotoolbox.org/) project.
 
-### Installation
+## Installation
 
 In this early version of the package, `koboloadeR` will only available on GitHub. It can be installed using:
 
@@ -14,7 +11,7 @@ source("http://jtilly.io/install_github/install_github.R")
 install_github("mrdwab/koboloadeR")
 ```
 
-### Functions
+## Functions
 
 The package contains the following core functions:
 
@@ -26,7 +23,7 @@ Function | Description
 
 For all of the above functions, the default is to use the KoBo Toolbox API URLs. However, it should be possible to specify the API URL to use if you have a custom installation of the toolbox.
 
-#### Exported Utility Functions
+### Exported Utility Functions
 
 The package contains the following exported utility functions:
 
@@ -37,7 +34,7 @@ Function|Description
 
 ---------------
 
-### Examples
+## Examples
 
 The following examples access the public data available via KoBo Toolbox. Note that all of the functions have been set with defaults of `user = NULL` and `api = 'kobo'`.
 
@@ -84,7 +81,7 @@ example("kobo_submission_count")
 example("kobo_data_downloader")
 ```
 
-### Authentication
+## Authentication
 
 These functions all use basic HTTP authentication. The easiest way to enter the password details is the common `"username:password"` approach. Thus, when accessing form data using authentication, the function would be used in the following manner:
 
