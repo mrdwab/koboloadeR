@@ -2,8 +2,8 @@ Package: koboloadeR
 Type: Package
 Title: Retrieve Data Using the KoBo Toolbox API
 Version: 0.1.0
-Author: Ananda Mahto
-Maintainer: Ananda Mahto <ananda@mahto.info>
+Authors@R: person("Ananda", "Mahto", email = "ananda@mahto.info",
+  role = c("aut", "cre"))
 Description: KoBo Toolbox offers a convenient way to collect data using web and
     mobile forms. This package facilitates the retrieval of data entered using these
     tools using the KoBo Toolbox API (v1).
@@ -11,5 +11,7 @@ License: GPL-3
 LazyData: TRUE
 Depends:
     data.table (>= 1.9.4),
-    httr (>= 1.0.0)
+    httr
+URL: https://github.com/mrdwab/koboloadeR
+BugReports: https://github.com/mrdwab/koboloadeR/issues
 RoxygenNote: 5.0.1
