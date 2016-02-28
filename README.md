@@ -26,6 +26,15 @@ Function | Description
 
 For all of the above functions, the default is to use the KoBo Toolbox API URLs. However, it should be possible to specify the API URL to use if you have a custom installation of the toolbox.
 
+#### Exported Utility Functions
+
+The package contains the following exported utility functions:
+
+Function|Description
+----|----
+`kobo_time_parser_UTC`|Converts a date/time character string into a POSIXct time object.
+`kobo_time_parser`|Formats a date/time character string into a character string for a specified timezone. Convert using `as.POSIXct` if you need an actual time object.
+
 ---------------
 
 ### Examples
