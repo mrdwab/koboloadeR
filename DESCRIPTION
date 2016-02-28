@@ -11,5 +11,5 @@ License: GPL-3
 LazyData: TRUE
 Depends:
     data.table (>= 1.9.4),
-    httr (>= 1.1.0)
+    httr (>= 1.0.0)
 RoxygenNote: 5.0.1
