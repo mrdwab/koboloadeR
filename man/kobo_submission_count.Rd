@@ -9,9 +9,11 @@ kobo_submission_count(formid, user = NULL, api = "kobo")
 \arguments{
 \item{formid}{The ID of the form to be accessed (as a character string).}
 
-\item{user}{Optional. A single string indicating the username and password ("username:password"), or a character vector or list, length 2, with the first value being the "username", and the second being the "password".}
-
-\item{api}{The URL at which the API can be accessed. Defaults to "kobo", which loads the KoBo Toolbox API.}
+\item{user}{Optional. A single string indicating the username and password
+(in the form of \code{"username:password"}), or a character vector or list,
+length 2, with the first value being the "username", and the second being
+the "password".#' @param api The URL at which the API can be accessed.
+Defaults to "kobo", which loads the KoBo Toolbox API.}
 }
 \value{
 A single number indicating the number of submissions received.

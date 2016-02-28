@@ -7,13 +7,17 @@
 pwd_parse(...)
 }
 \arguments{
-\item{\dots}{A single string, character vetor, or list containing the username and password that should be used. If it is a single string, it should be in the form of "username:password".}
+\item{\dots}{A single string, character vetor, or list containing the
+username and password that should be used. If it is a single string, it
+should be in the form of "username:password".}
 }
 \description{
-Converts a string of length 1 or of length 2 into a list that can then be passed on to the \code{authenticate} function from the "httr" package.
+Converts a string of length 1 or of length 2 into a list that can then be
+passed on to the \code{authenticate} function from the "httr" package.
 }
 \note{
-This function is not intended to be called directly. It is used in other functions.
+This function is not intended to be called directly.
+It is used in other functions.
 }
 \examples{
 

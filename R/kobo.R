@@ -1,11 +1,17 @@
 #' Lists the Datasets Available
 #'
-#' Lists the datasets available at the URL being accessed, possibly according to account.
+#' Lists the datasets available at the URL being accessed, possibly according
+#' to account.
 #'
-#' @param user Optional. A single string indicating the username and password ("username:password"), or a character vector or list, length 2, with the first value being the "username", and the second being the "password".
-#' @param api The URL at which the API can be accessed. Defaults to "kobo", which loads the KoBo Toolbox API.
+#' @param user Optional. A single string indicating the username and password
+#' (in the form of \code{"username:password"}), or a character vector or list,
+#' length 2, with the first value being the "username", and the second being
+#' the "password".
+#' @param api The URL at which the API can be accessed. Defaults to "kobo",
+#' which loads the KoBo Toolbox API.
 #'
-#' @return A data.table containing details about the datasets available, including items like the "title", "id", and "url" of the datasets.
+#' @return A data.table containing details about the datasets available,
+#' including items like the "title", "id", and "url" of the datasets.
 #'
 #' @author Ananda Mahto
 #'
@@ -26,8 +32,11 @@ NULL
 #' Retrieves the number of submissions made to a specified dataset.
 #'
 #' @param formid The ID of the form to be accessed (as a character string).
-#' @param user Optional. A single string indicating the username and password ("username:password"), or a character vector or list, length 2, with the first value being the "username", and the second being the "password".
-#' @param api The URL at which the API can be accessed. Defaults to "kobo", which loads the KoBo Toolbox API.
+#' @param user Optional. A single string indicating the username and password
+#' (in the form of \code{"username:password"}), or a character vector or list,
+#' length 2, with the first value being the "username", and the second being
+#' the "password".#' @param api The URL at which the API can be accessed.
+#' Defaults to "kobo", which loads the KoBo Toolbox API.
 #' @return A single number indicating the number of submissions received.
 #' @author Ananda Mahto
 #'
@@ -51,10 +60,16 @@ NULL
 #' Retrieves the data submitted to a specified dataset.
 #'
 #' @param formid The ID of the form to be accessed (as a character string).
-#' @param user Optional. A single string indicating the username and password ("username:password"), or a character vector or list, length 2, with the first value being the "username", and the second being the "password".
-#' @param api The URL at which the API can be accessed. Defaults to "kobo", which loads the KoBo Toolbox API.
-#' @param check Logical. Should the function first check to see whether the data is available offline.
-#' @return A "data.table" with the full dataset. If data is already found on disk and the number of rows matches with the online datasets, the local copy would be used. The dataset would be named in the form of "data_formid".
+#' @param user Optional. A single string indicating the username and password
+#' (in the form of \code{"username:password"}), or a character vector or list,
+#' length 2, with the first value being the "username", and the second being
+#' the "password".#' @param api The URL at which the API can be accessed.
+#' Defaults to "kobo", which loads the KoBo Toolbox API.
+#' @param check Logical. Should the function first check to see whether the
+#' data is available offline.
+#' @return A "data.table" with the full dataset. If data is already found on
+#' disk and the number of rows matches with the online datasets, the local copy
+#' would be used. The dataset would be named in the form of "data_formid".
 #' @author Ananda Mahto
 #'
 #' @examples

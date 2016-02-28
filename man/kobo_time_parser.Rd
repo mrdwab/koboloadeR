@@ -16,14 +16,14 @@ kobo_time_parser(indatetime, timezone = Sys.timezone())
 from \code{\link[base:OlsonNames]{OlsonNames}}.}
 }
 \value{
-The \code{kobo_time_parser_UTC} function returns a POSIXct object, while
-the \code{kobo_time_parser} function returns a formatted character string that
-can be easily parsed as a date/time object.
+The \code{kobo_time_parser_UTC} function returns a POSIXct object,
+while the \code{kobo_time_parser} function returns a formatted character
+string that can be easily parsed as a date/time object.
 }
 \description{
-The date/time values in KoBo usually get stored in a format like the
-following: "2015-08-27T13:28:29.000+06:30".
-These functions process these date/times into more usable formats.
+The date/time values in KoBo usually get stored in a format
+like the following: "2015-08-27T13:28:29.000+06:30". These functions
+process these date/times into more usable formats.
 }
 \examples{
 TIME <- "2015-08-27T13:28:29.000+06:30"

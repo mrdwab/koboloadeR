@@ -4,9 +4,15 @@
 #'
 #' @param instring Either "kobo", "kobohr", "ona", or a custom (full) URL.
 #' @return A single string with the URL to use.
-#' @note API URLs are made available for KoBo Toolbox ("kobo", \url{https://kc.kobotoolbox.org/api/v1/}), KoBo Humanitarian Response ("kobohr", \url{https://kc.humanitarianresponse.info/api/v1/}), and Ona ("ona", \url{https://ona.io/api/v1/}). For your own installation, or other installations using the same API but accessed at a different URL, enter the full URL.
+#' @note API URLs are made available for KoBo Toolbox ("kobo",
+#' \url{https://kc.kobotoolbox.org/api/v1/}), KoBo Humanitarian Response
+#' ("kobohr", \url{https://kc.humanitarianresponse.info/api/v1/}), and Ona
+#' ("ona", \url{https://ona.io/api/v1/}). For your own installation, or other
+#' installations using the same API but accessed at a different URL,
+#' enter the full URL.
 #' @author Ananda Mahto
-#' @note This function is not intended to be called directly. It is used in other functions.
+#' @note This function is not intended to be called directly.
+#' It is used in other functions.
 #' @examples
 #' host("kobo")
 #' host("https://ona.io/api/v1/") ## same as host("ona")
@@ -29,7 +35,8 @@ NULL
 #'
 #' @param user string of length 1 or 2 with user details
 #' @param URL The URL to be passed to curl
-#' @note This function is not intended to be called directly. It is used in other functions.
+#' @note This function is not intended to be called directly.
+#' It is used in other functions.
 #' @author Ananda Mahto
 #'
 get_me <- function(user, URL) {
@@ -44,10 +51,14 @@ NULL
 
 #' Helper Function to Parse a String to be Used as a Username/Password Combination
 #'
-#' Converts a string of length 1 or of length 2 into a list that can then be passed on to the \code{authenticate} function from the "httr" package.
+#' Converts a string of length 1 or of length 2 into a list that can then be
+#' passed on to the \code{authenticate} function from the "httr" package.
 #'
-#' @param \dots A single string, character vetor, or list containing the username and password that should be used. If it is a single string, it should be in the form of "username:password".
-#' @note This function is not intended to be called directly. It is used in other functions.
+#' @param \dots A single string, character vetor, or list containing the
+#' username and password that should be used. If it is a single string, it
+#' should be in the form of "username:password".
+#' @note This function is not intended to be called directly.
+#' It is used in other functions.
 #'
 #' @examples
 #'
@@ -80,16 +91,16 @@ NULL
 #' @rdname kobo_time_parser
 #' @title Parses Dates from KoBo Into a More Usable Format
 #'
-#' @description The date/time values in KoBo usually get stored in a format like the
-#' following: "2015-08-27T13:28:29.000+06:30".
-#' These functions process these date/times into more usable formats.
+#' @description The date/time values in KoBo usually get stored in a format
+#' like the following: "2015-08-27T13:28:29.000+06:30". These functions
+#' process these date/times into more usable formats.
 #'
 #' @param instring A date/time format coming from KoBo.
 #' @param timezone A valid timezone, available in the list available
 #' from \code{\link[base:OlsonNames]{OlsonNames}}.
-#' @return The \code{kobo_time_parser_UTC} function returns a POSIXct object, while
-#' the \code{kobo_time_parser} function returns a formatted character string that
-#' can be easily parsed as a date/time object.
+#' @return The \code{kobo_time_parser_UTC} function returns a POSIXct object,
+#' while the \code{kobo_time_parser} function returns a formatted character
+#' string that can be easily parsed as a date/time object.
 #' @author Ananda Mahto
 NULL
 
@@ -106,7 +117,6 @@ kobo_time_parser_UTC <- function(instring) {
   as.POSIXct(strptime(tmp, format = "%Y-%m-%dT%H%M%S%z", tz = "UTC"))
 }
 NULL
-
 
 #' @rdname kobo_time_parser
 #' @examples

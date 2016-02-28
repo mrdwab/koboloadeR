@@ -15,7 +15,8 @@ get_me(user, URL)
 Adds basic level authentication if provided.
 }
 \note{
-This function is not intended to be called directly. It is used in other functions.
+This function is not intended to be called directly.
+It is used in other functions.
 }
 \author{
 Ananda Mahto
