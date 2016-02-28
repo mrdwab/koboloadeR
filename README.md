@@ -11,7 +11,7 @@ In this early version of the package, `koboloadeR` will only available on GitHub
 
 ```
 source("http://jtilly.io/install_github/install_github.R")
-install_github("mrdwab/kobodownloadeR")
+install_github("mrdwab/koboloadeR")
 ```
 
 ### Functions
