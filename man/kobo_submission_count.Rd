@@ -2,7 +2,7 @@
 % Please edit documentation in R/kobo.R
 \name{kobo_submission_count}
 \alias{kobo_submission_count}
-\title{Retrieve the number of submissions in a specified dataset}
+\title{Retrieve the Number of Submissions in a Specified Dataset}
 \usage{
 kobo_submission_count(formid, user = NULL, api = "kobo")
 }

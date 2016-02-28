@@ -2,7 +2,7 @@
 % Please edit documentation in R/kobo.R
 \name{kobo_datasets}
 \alias{kobo_datasets}
-\title{Lists the datasets available}
+\title{Lists the Datasets Available}
 \usage{
 kobo_datasets(user = NULL, api = "kobo")
 }

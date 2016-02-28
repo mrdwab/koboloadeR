@@ -2,7 +2,7 @@
 % Please edit documentation in R/kobo.R
 \name{kobo_data_downloader}
 \alias{kobo_data_downloader}
-\title{Retrieve the data from a specified dataset}
+\title{Retrieve the Data from a Specified Dataset}
 \usage{
 kobo_data_downloader(formid, user = NULL, api = "kobo", check = TRUE)
 }

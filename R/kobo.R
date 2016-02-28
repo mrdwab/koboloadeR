@@ -1,82 +1,4 @@
-#' Specifies the host URL of the API to use
-#'
-#' A helper function to conveniently switch different APIs.
-#'
-#' @param instring Either "kobo", "kobohr", "ona", or a custom (full) URL.
-#' @return A single string with the URL to use.
-#' @note API URLs are made available for KoBo Toolbox ("kobo", \url{https://kc.kobotoolbox.org/api/v1/}), KoBo Humanitarian Response ("kobohr", \url{https://kc.humanitarianresponse.info/api/v1/}), and Ona ("ona", \url{https://ona.io/api/v1/}). For your own installation, or other installations using the same API but accessed at a different URL, enter the full URL.
-#' @author Ananda Mahto
-#' @note This function is not intended to be called directly. It is used in other functions.
-#' @examples
-#' host("kobo")
-#' host("https://ona.io/api/v1/") ## same as host("ona")
-#'
-host <- function(instring) {
-  if (instring %in% c("kobo", "kobohr", "ona")) {
-    switch(instring,
-           kobo = "https://kc.kobotoolbox.org/api/v1/",
-           kobohr = "https://kc.humanitarianresponse.info/api/v1/",
-           ona = "https://ona.io/api/v1/")
-  } else {
-    instring
-  }
-}
-NULL
-
-#' Helper function for GET, depending on whether authentication is required
-#'
-#' Adds basic level authentication if provided.
-#'
-#' @param user string of length 1 or 2 with user details
-#' @param URL The URL to be passed to curl
-#' @note This function is not intended to be called directly. It is used in other functions.
-#' @author Ananda Mahto
-#'
-get_me <- function(user, URL) {
-  if (is.null(user)) {
-    GET(URL)
-  } else {
-    u <- pwd_parse(user)
-    GET(URL, authenticate(u$username, u$password))
-  }
-}
-NULL
-
-#' Helper function to parse a string to be used as a username/password combination
-#'
-#' Converts a string of length 1 or of length 2 into a list that can then be passed on to the \code{authenticate} function from the "httr" package.
-#'
-#' @param \dots A single string, character vetor, or list containing the username and password that should be used. If it is a single string, it should be in the form of "username:password".
-#' @note This function is not intended to be called directly. It is used in other functions.
-#'
-#' @examples
-#'
-#' pwd_parse("username", "password")
-#' pwd_parse("username:password")
-#' pwd_parse(c("username", "password"))
-#'
-#' @author Ananda Mahto
-#'
-pwd_parse <- function(...) {
-  upw <- unlist(list(...))
-  nam <- c("username", "password")
-  auth <- {
-    if (length(upw) == 1) {
-      unlist(strsplit(upw, ":", TRUE))
-    } else {
-      if (length(upw) > 2) {
-        message("More than two values supplied. Using only first two values.")
-        upw[1:2]
-      } else {
-        upw
-      }
-    }
-  }
-  setNames(as.list(auth), nam)
-}
-NULL
-
-#' Lists the datasets available
+#' Lists the Datasets Available
 #'
 #' Lists the datasets available at the URL being accessed, possibly according to account.
 #'
@@ -99,7 +21,7 @@ kobo_datasets <- function(user = NULL, api = "kobo") {
 }
 NULL
 
-#' Retrieve the number of submissions in a specified dataset
+#' Retrieve the Number of Submissions in a Specified Dataset
 #'
 #' Retrieves the number of submissions made to a specified dataset.
 #'
@@ -124,7 +46,7 @@ kobo_submission_count <- function(formid, user = NULL, api = "kobo") {
 NULL
 
 
-#' Retrieve the data from a specified dataset
+#' Retrieve the Data from a Specified Dataset
 #'
 #' Retrieves the data submitted to a specified dataset.
 #'
