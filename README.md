@@ -1,6 +1,10 @@
 # koboloadeR
 
-The `koboloadeR` package is a simple R connection to the [KoBo API (v1)](https://kc.kobotoolbox.org/api/v1/) for the [KoBo Toolbox](http://www.kobotoolbox.org/) project.
+The `koboloadeR` package is a simple R connection to the [KoBo API (v1)](https://kc.kobotoolbox.org/api/v1/) for the [KoBo Toolbox](http://www.kobotoolbox.org/) project. It also provides a Shiny data viewer accessible using:
+
+```
+kobo_apps("data_viewer")
+```
 
 ## Installation
 
@@ -22,6 +26,14 @@ Function | Description
 `kobo_data_downloader`|Downloads a specified dataset via the KoBo API. Returns a `data.table` of the entire dataset requested.
 
 For all of the above functions, the default is to use the KoBo Toolbox API URLs. However, it should be possible to specify the API URL to use if you have a custom installation of the toolbox.
+
+## Shiny Apps
+
+The package contains the following Shiny apps, accessible via `kobo_apps("app_name")`:
+
+App | Description
+---|---
+`"data_viewer"` | The `"data_viewer"` app provides a basic login screen to authenticate against the specified API. Once authenticated, the datasets available via the specified login are displayed, and a dropdown list is populated with which one can select the dataset they want to view. The dataset is also made available in the users Global Environment.
 
 ### Exported Utility Functions
 

@@ -1,5 +1,9 @@
 # NEWS
 
+## koboloadeR 0.1.1
+
+The "data_viewer" Shiny app was added. 
+
 ## koboloadeR 0.1.0
 
 KoBo Toolbox offers a convenient way to collect data using web and mobile forms. This package facilitates the retrieval of data entered using these tools using the KoBo Toolbox API (v1).

@@ -1,7 +1,7 @@
 Package: koboloadeR
 Type: Package
 Title: Retrieve Data Using the KoBo Toolbox API
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: person("Ananda", "Mahto", email = "ananda@mahto.info",
   role = c("aut", "cre"))
 Description: KoBo Toolbox offers a convenient way to collect data using web and
@@ -12,6 +12,9 @@ LazyData: TRUE
 Depends:
     data.table (>= 1.9.4),
     httr
+Suggests:
+    shiny,
+    DT
 URL: https://github.com/mrdwab/koboloadeR
 BugReports: https://github.com/mrdwab/koboloadeR/issues
 RoxygenNote: 5.0.1
