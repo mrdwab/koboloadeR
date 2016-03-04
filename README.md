@@ -11,9 +11,11 @@ kobo_apps("data_viewer")
 In this early version of the package, `koboloadeR` will only available on GitHub. It can be installed using:
 
 ```
-source("http://jtilly.io/install_github/install_github.R")
+source("http://news.mrdwab.com/install_github.R")
 install_github("mrdwab/koboloadeR")
 ```
+
+(This version of `install_github` via [@jtilly](https://github.com/jtilly/install_github).)
 
 ## Functions
 
@@ -34,6 +36,8 @@ The package contains the following Shiny apps, accessible via `kobo_apps("app_na
 App | Description
 ---|---
 `"data_viewer"` | The `"data_viewer"` app provides a basic login screen to authenticate against the specified API. Once authenticated, the datasets available via the specified login are displayed, and a dropdown list is populated with which one can select the dataset they want to view. The dataset is also made available in the users Global Environment.
+
+Here's [a blog post introducing the package](http://news.mrdwab.com/post/koboloader/)!
 
 ### Exported Utility Functions
 
