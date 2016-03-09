@@ -23,7 +23,8 @@
 kobo_datasets <- function(user = NULL, api = "kobo") {
   URL <- sprintf(fmt = "%sdata.csv", host(api))
   x <- get_me(user, URL)
-  fread(rawToChar(x$content))
+  cat("\n\n")
+  f_csv(x)
 }
 NULL
 
@@ -51,7 +52,8 @@ kobo_submission_count <- function(formid, user = NULL, api = "kobo") {
   URL <- "%sstats/submissions/%s.csv?group=dummydatagroupingvar"
   URL <- sprintf(fmt = URL, host(api), formid)
   x <- get_me(user, URL)
-  fread(rawToChar(x$content))$count
+  cat("\n\n")
+  f_csv(x)$count
 }
 NULL
 
@@ -107,8 +109,8 @@ kobo_data_downloader <- function(formid, user = NULL, api = "kobo", check = TRUE
     URL <- sprintf(fmt = '%sdata/%s.csv', host(api), formid)
 
     x <- get_me(user, URL)
-
-    out <- suppressWarnings(fread(rawToChar(x$content)))
+    cat("\n\n")
+    out <- f_csv(x)
     assign(locfile, out, envir = .GlobalEnv)
     out
   } else {

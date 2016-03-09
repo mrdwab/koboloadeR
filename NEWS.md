@@ -1,5 +1,9 @@
 # NEWS
 
+## koboloadeR 0.1.2
+
+Testing `read_csv` wrapped in `setDT` to see whether it resolves issue #4.
+
 ## koboloadeR 0.1.1
 
 The "data_viewer" Shiny app was added. 
