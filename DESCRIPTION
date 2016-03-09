@@ -11,7 +11,8 @@ License: GPL-3
 LazyData: TRUE
 Depends:
     data.table (>= 1.9.4),
-    httr
+    httr,
+    bit64
 Suggests:
     shiny,
     DT

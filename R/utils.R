@@ -43,10 +43,10 @@ NULL
 #'
 get_me <- function(user, URL) {
   if (is.null(user)) {
-    GET(URL)
+    GET(URL, progress())
   } else {
     u <- pwd_parse(user)
-    GET(URL, authenticate(u$username, u$password))
+    GET(URL, authenticate(u$username, u$password), progress())
   }
 }
 NULL
@@ -137,4 +137,7 @@ NULL
 NULL
 
 #' @import data.table
+NULL
+
+#' @import bit64
 NULL
