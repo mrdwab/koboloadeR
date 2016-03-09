@@ -133,11 +133,3 @@ kobo_time_parser <- function(instring, timezone = Sys.timezone()) {
 }
 NULL
 
-#' @import httr
-NULL
-
-#' @import data.table
-NULL
-
-#' @import bit64
-NULL
